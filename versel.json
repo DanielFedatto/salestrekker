@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-        {
-          "source": "/dist",
-          "destination": "/"
+    "routes": [
+        { 
+            "src": "/dist", 
+            "dest": "/" 
         }
     ]
 }
