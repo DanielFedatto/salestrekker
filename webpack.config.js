@@ -88,15 +88,10 @@ module.exports = (env, options) => {
                     },
                 },
                 {
-                    test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                    test: /\.(png|svg|jpg|gif)$/,
                     use: [
-                        {
-                            loader: "file-loader",
-                            options: {
-                                outputPath: "assets/"
-                            }
-                        }
-                    ]
+                        'file-loader',
+                    ],
                 }
             ]
         },
