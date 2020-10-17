@@ -17,14 +17,14 @@ module.exports = (env, options) => {
             hot: true,
             open: 'Google Chrome Canary',
             liveReload: true,
-            port: 8081,
+            port: 9000,
         },
-        entry: './src/index.js',
+        entry: './src/index.jsx',
         output: {
             path: path.resolve(process.cwd(), 'dist'),
         },
         resolve: {
-            extensions: [".js"],
+            extensions: [".jsx", ".js"],
         },
         module: {
             
@@ -57,9 +57,16 @@ module.exports = (env, options) => {
                         {
                             loader: "postcss-loader",
                             options: {
-                                plugins: [
-                                    require("autoprefixer")()
-                                ],
+                                postcssOptions: {
+                                    plugins: [
+                                      [
+                                        'autoprefixer',
+                                        {
+                                          
+                                        },
+                                      ],
+                                    ],
+                                },
                                 sourceMap: isDevMode
                             }
                         },
