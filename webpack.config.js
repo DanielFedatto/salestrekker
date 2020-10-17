@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const settings = {
-    distPath: path.join(__dirname, "public"),
+    distPath: path.join(__dirname, "dist"),
     srcPath: path.join(__dirname, "src")
 };
 
@@ -21,8 +21,7 @@ module.exports = (env, options) => {
         },
         entry: './src/index.jsx',
         output: {
-            publicPath: './public',
-            path: path.resolve(process.cwd(), 'public'),
+            path: path.resolve(process.cwd(), 'dist'),
         },
         resolve: {
             extensions: [".jsx", ".js"],
@@ -102,7 +101,7 @@ module.exports = (env, options) => {
             ]
         },
         plugins: [
-            
+            new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 filename: "./index.html"
