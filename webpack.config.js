@@ -21,6 +21,7 @@ module.exports = (env, options) => {
         },
         entry: './src/index.jsx',
         output: {
+            publicPath: './dist',
             path: path.resolve(process.cwd(), 'dist'),
         },
         resolve: {
@@ -101,11 +102,61 @@ module.exports = (env, options) => {
             ]
         },
         plugins: [
-            new CleanWebpackPlugin(),
+            
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 filename: "./index.html"
             })
         ]
     };
+};
+
+
+const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  "entry": {
+    "index": "./src/index.jsx"
+  },
+  "output": {
+    "path": "./dist",
+    "publicPath": "dist"
+  },
+  "module": {
+    "rules": [
+      {
+        "test": /.(.jsx|.js)$/,
+        "use": "file-loader"
+      },
+      {
+        "test": /\.js$/,
+        "use": "source-map-loader"
+      },
+      {
+        "test": /\.jsx?$/,
+        "use": "babel-loader"
+      },
+      {
+        "test": /\.css$/,
+        "use": [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ]
+      },
+      {
+        "test": /\.svg$/,
+        "use": "svg-loader"
+      }
+    ]
+  },
+  "plugins": [
+    new CleanWebpackPlugin(),
+    new HTMLWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  "devServer": {
+    "hot": true
+  }
 };
