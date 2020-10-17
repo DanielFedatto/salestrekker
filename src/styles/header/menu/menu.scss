@@ -1,0 +1,12 @@
+.mainMenu {
+    display: flex;
+    li {
+        a {
+            font-family: $raleway;
+            text-transform: uppercase;
+            margin: 0 30px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+    }
+}
