@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import Header from './header/Header'
+import Banners from './banner/Banner'
 
-class Index extends Component {
-    render () {
-        return (
+function Index() {
+    
+    return (
+        <main>
             <Header />
-        )
-    }
+            <Banners />
+        </main>
+    )
 }
 
 export default Index;
