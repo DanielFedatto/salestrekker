@@ -55,6 +55,9 @@ module.exports = (env, options) => {
                             }
                         },
                         {
+                            loader: "resolve-url-loader"
+                        },
+                        {
                             loader: "postcss-loader",
                             options: {
                                 postcssOptions: {
