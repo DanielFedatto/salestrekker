@@ -22,7 +22,7 @@ header {
     height: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     .logo {
-        background: url('../../images/logo-dark.png');
+        background: url('~/src/images/logo-dark.png');
         background-size: contain;
         background-repeat: no-repeat;
         transition: height .4s ease, opacity .3s ease;
@@ -35,12 +35,12 @@ header {
 .logo {
     width: 269px;
     height: 100px;
-    background: url('../../images/logo-white.png');
+    background: url('~/src/images/logo-white.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: height .4s ease, opacity .3s ease;
     @media screen and(max-width: 767px) {
-        background: url('../../images/logo-dark.png');
+        background: url('~/src/images/logo-dark.png');
         background-size: contain;
         background-repeat: no-repeat;
         transition: height .4s ease, opacity .3s ease;

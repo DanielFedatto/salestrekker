@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Banner from '../../images/1.jpg'
+import Banner from '../../images/banner.jpg'
 
 import 'swiper/swiper.scss';
 

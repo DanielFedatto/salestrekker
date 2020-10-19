@@ -55,7 +55,11 @@ module.exports = (env, options) => {
                             }
                         },
                         {
-                            loader: "resolve-url-loader"
+                            loader: "resolve-url-loader",
+                            options: { 
+                                sourceMap: isDevMode,
+                                removeCR: true 
+                            }
                         },
                         {
                             loader: "postcss-loader",
@@ -93,7 +97,7 @@ module.exports = (env, options) => {
                 {
                     test: /\.(png|svg|jpg|gif)$/,
                     use: [
-                        'file-loader',
+                        'url-loader',
                     ],
                 }
             ]
