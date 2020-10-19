@@ -1,5 +1,8 @@
 .banners {
     margin-top: -100px;
+    @media screen and(max-width: 767px) {
+        margin-top: 0;
+    }
     figure {
         display: flex;
         justify-content: center;
@@ -16,9 +19,26 @@
             h1 {
                 font-weight: 700;
                 text-transform: uppercase;
+                @media screen and(max-width: 767px) {
+                    margin-top: 10px;
+                    padding: 20px 0;
+                    font-size: 20px;
+                }
+                @media screen and(max-width: 767px) {
+                    font-size: 20px;
+                }
             }
             p {
                 font-size: 24px;
+                @media screen and(max-width: 767px) {
+                    margin-top: 10px;
+                    background: rgba(0, 0, 0, 0.30);
+                    border-radius: 10px;
+                    color: #FFFFFF;
+                    padding: 10px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
             }
         }
     }
