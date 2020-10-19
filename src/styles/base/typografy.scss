@@ -1,5 +1,6 @@
 body {
     font-family: $lato;
+    color: #444444;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
@@ -48,4 +49,11 @@ strong {
 }
 small {
     font-size: 75%;
+}
+
+a {
+    transition: opacity .2s;
+    &:hover {
+        opacity: 0.75;
+    }
 }
